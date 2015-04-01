@@ -41,8 +41,14 @@ namespace OAuthX.Controllers
         [ResponseType(typeof(OAuthTransaction))]
         public async Task<IHttpActionResult> GetOAuthTransaction(Guid id, String authUrl)
         {
-            authUrl = Encoding.UTF8.GetString(Convert.FromBase64String(authUrl));
-            OAuthTransaction oAuthTransaction = new OAuthTransaction(id, authUrl);
+            return await GetOAuthTransaction(id, authUrl, "other");
+        }
+
+        [ResponseType(typeof(OAuthTransaction))]
+        public async Task<IHttpActionResult> GetOAuthTransaction(Guid id, String authUrl, String authType)
+        {
+            String newAuthUrl = Encoding.UTF8.GetString(Convert.FromBase64String(authUrl));
+            OAuthTransaction oAuthTransaction = new OAuthTransaction(id, authUrl, authType);
             db.OAuthTransactions.Add(oAuthTransaction);
 
             try
@@ -60,8 +66,10 @@ namespace OAuthX.Controllers
                     throw;
                 }
             }
+            if (oAuthTransaction.authType == OAuthTransaction.authTypes.loginWithAmazon)
+                newAuthUrl = processAmazonUrl.getLoginString(newAuthUrl, oAuthTransaction);
 
-            return Redirect(new Uri(authUrl));
+            return Redirect(new Uri(newAuthUrl));
         }
 
         //// PUT: api/OAuthTransactions/5
