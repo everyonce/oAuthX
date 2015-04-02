@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace OAuthX.Areas.HelpPage.ModelDescriptions
+namespace oAuthX.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterDescription
     {

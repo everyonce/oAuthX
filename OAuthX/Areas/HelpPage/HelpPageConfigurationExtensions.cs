@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using OAuthX.Areas.HelpPage.ModelDescriptions;
-using OAuthX.Areas.HelpPage.Models;
+using oAuthX.Areas.HelpPage.ModelDescriptions;
+using oAuthX.Areas.HelpPage.Models;
 
-namespace OAuthX.Areas.HelpPage
+namespace oAuthX.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

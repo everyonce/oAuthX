@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace OAuthX.Areas.HelpPage.ModelDescriptions
+namespace oAuthX.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

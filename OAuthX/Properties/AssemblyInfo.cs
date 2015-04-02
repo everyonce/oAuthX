@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OAuthPassthrough")]
+[assembly: AssemblyTitle("oAuthX")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OAuthPassthrough")]
+[assembly: AssemblyProduct("oAuthX")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3a1def76-3579-4897-949e-3478bfb2b2f3")]
+[assembly: Guid("cf11b6e4-f61e-4e95-b3a7-d41410133784")]
 
 // Version information for an assembly consists of the following four values:
 //

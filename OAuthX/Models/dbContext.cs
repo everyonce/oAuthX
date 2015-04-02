@@ -6,7 +6,7 @@ using System.Web;
 
 namespace OAuthX.Models
 {
-    public class OAuthPassthroughContext : DbContext
+    public class dbContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,8 +15,10 @@ namespace OAuthX.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public OAuthPassthroughContext() : base("name=OAuthPassthroughContext")
+        public dbContext() : base("name=dbContext")
         {
+            Database.SetInitializer(new DropCreateDatabaseAlways<dbContext>());
+            //Database.Initialize(true);
         }
 
         public System.Data.Entity.DbSet<OAuthX.Models.OAuthTransaction> OAuthTransactions { get; set; }

@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace OAuthX.Areas.HelpPage
+namespace oAuthX.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

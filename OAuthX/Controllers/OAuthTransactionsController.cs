@@ -17,7 +17,7 @@ namespace OAuthX.Controllers
 {
     public class OAuthTransactionsController : ApiController
     {
-        private OAuthPassthroughContext db = new OAuthPassthroughContext();
+        private dbContext db = new dbContext();
 
         // GET: api/OAuthTransactions
         public IQueryable<OAuthTransaction> GetOAuthTransactions()
@@ -59,7 +59,8 @@ namespace OAuthX.Controllers
             {
                 if (OAuthTransactionExists(oAuthTransaction.id))
                 {
-                    return Conflict();
+                    //do nothing, we can still pass the url for the existing one.
+                    //TODO: give helpful error, etxc
                 }
                 else
                 {
@@ -133,7 +134,7 @@ namespace OAuthX.Controllers
                     throw;
                 }
             }
-            
+
             return Redirect(new Uri("http://www.google.com"));
             //return CreatedAtRoute("DefaultApi", new { id = oAuthTransaction.id }, oAuthTransaction);
         }

@@ -1,6 +1,6 @@
 using System;
 
-namespace OAuthX.Areas.HelpPage.ModelDescriptions
+namespace oAuthX.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

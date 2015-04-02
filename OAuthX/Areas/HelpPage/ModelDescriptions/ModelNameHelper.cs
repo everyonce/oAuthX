@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace OAuthX.Areas.HelpPage.ModelDescriptions
+namespace oAuthX.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

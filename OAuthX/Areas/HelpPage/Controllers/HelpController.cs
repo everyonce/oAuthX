@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using OAuthX.Areas.HelpPage.ModelDescriptions;
-using OAuthX.Areas.HelpPage.Models;
+using oAuthX.Areas.HelpPage.ModelDescriptions;
+using oAuthX.Areas.HelpPage.Models;
 
-namespace OAuthX.Areas.HelpPage.Controllers
+namespace oAuthX.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

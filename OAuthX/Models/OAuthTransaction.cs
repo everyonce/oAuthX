@@ -8,7 +8,7 @@ namespace OAuthX.Models
     public class OAuthTransaction
     {
         public Guid? id { get; set; }
-        public String authUrl {get; set;}
+        public String authUrl { get; set; }
         public Boolean authComplete { get; set; }
         public String authCode { get; set; }
         public authTypes authType { get; set; }
@@ -24,13 +24,15 @@ namespace OAuthX.Models
         }
 
 
-        public OAuthTransaction(Guid nId, String nAuthUrl) : base()
+        public OAuthTransaction(Guid nId, String nAuthUrl)
+            : base()
         {
             id = nId;
             authUrl = nAuthUrl;
         }
 
-        public OAuthTransaction(Guid nId, String nAuthUrl, String nAuthType) : base()
+        public OAuthTransaction(Guid nId, String nAuthUrl, String nAuthType)
+            : base()
         {
             id = nId;
             authUrl = nAuthUrl;

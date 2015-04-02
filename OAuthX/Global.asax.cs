@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace OAuthX
+namespace oAuthX
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
@@ -18,6 +18,8 @@ namespace OAuthX
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            GlobalConfiguration.Configuration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
         }
     }
 }
