@@ -47,8 +47,8 @@ namespace OAuthX.Controllers
         [ResponseType(typeof(OAuthTransaction))]
         public async Task<IHttpActionResult> GetOAuthTransaction(Guid id, String authUrl, String authType)
         {
-            String newAuthUrl = Encoding.UTF8.GetString(Convert.FromBase64String(authUrl));
-            OAuthTransaction oAuthTransaction = new OAuthTransaction(id, authUrl, authType);
+            String newAuthUrl = Encoding.Unicode.GetString(Convert.FromBase64String(authUrl));
+            OAuthTransaction oAuthTransaction = new OAuthTransaction(id, newAuthUrl, authType);
             db.OAuthTransactions.Add(oAuthTransaction);
 
             try
